@@ -17,17 +17,15 @@ const Header = () => {
                         <Nav.Link as={NavLink} className="text-dark  fw-bolder" to="/services">Service </Nav.Link>
                         <Nav.Link as={NavLink} className="text-dark  fw-bolder" to="/about">About</Nav.Link>
                         <Nav.Link as={NavLink} className="text-dark fw-bolder" to="/contact"> Contact </Nav.Link>
-                        <NavDropdown title="Dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                        {/*<NavDropdown title="Dropdown">
+                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                             <NavDropdown.Divider />
-                        </NavDropdown>
+                        </NavDropdown> */}
                     </Nav>
                     <Nav>
-                        <Nav.Link as={NavLink} className="text-dark  fw-bolder" to="/login">Login</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            Dank memes
-                        </Nav.Link>
+                        <button className="login-btn"><Nav.Link as={NavLink} className="text-dark  fw-bolder" to="/login">Login</Nav.Link></button>
+                        
                     </Nav>
                 </Navbar.Collapse>
              </Container >

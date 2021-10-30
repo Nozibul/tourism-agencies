@@ -11,6 +11,8 @@ import Login from './pages/Login/Login';
 import AuthProvider from './component/context/AuthProvider';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 import Register from './pages/Register/Register';
+import ServicesDetails from './component/ServicesDetails/ServicesDetails';
+import Footer from './pages/Footer/Footer';
 
 function App() {
   return (
@@ -22,31 +24,43 @@ function App() {
              <TopHeader />
              <Header />
              <Home />
+             <Footer></Footer>
           </Route>
           <Route exact path="/home">
             <TopHeader />
              <Header />
              <Home />
+             <Footer></Footer>
           </Route>
           <Route exact path="/about">
             <Header />
             <About />
+            <Footer></Footer>
           </Route>
           <Route exact path="/services">
             <Header />
             <Services />
+            <Footer></Footer>
           </Route>
+          <PrivateRoute exact path="/services/:Id">
+             <Header />
+             <ServicesDetails></ServicesDetails>
+             <Footer></Footer>
+          </PrivateRoute>
           <PrivateRoute exact path="/contact">
              <Header />
              <Contact />
+             <Footer></Footer>
           </PrivateRoute>
           <Route exact path="/login">
              <Header />
              <Login />
+             <Footer></Footer>
           </Route>
           <Route exact path="/register">
              <Header />
              <Register />
+             <Footer></Footer>
           </Route>
         </Switch>
           <Route path="*">

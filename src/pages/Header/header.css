@@ -7,8 +7,18 @@
 
 .logo{
     width: 130px;
-    height: 30px;
+  
 }
 .bg{
     color: black;
+}
+.login-btn{
+   background-color: #ffa601ed;
+   border: none;
+   border-radius: 10px;
+   
+}
+.login-btn:hover{
+    background-color: tomato;
+    
 }

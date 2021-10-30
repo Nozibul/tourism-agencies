@@ -1,0 +1,15 @@
+
+.footer{
+  
+    padding-top: 70px;
+    background-color: #020016;
+}
+h2{
+    color: #20bdd1;
+}
+.footer li{
+    color: whitesmoke;
+    list-style: none;
+    margin-top: 10px;
+}
+
