@@ -5,9 +5,8 @@ import './banner.css'
 const Banner = () => {
     return (
         <div className="bg ">
-            <h3 className="fw-bolder text-success fs-1 mt-3">Tripo Tourism Agen</h3>
-            <h1 className="fw-bolder txt-cl fs-1 mt-5"> Services <br /> That You Can Trust</h1>
-            <Link to="/about"><button className="p-2 mt-3 btn fw-bolder fs-5">More About Us</button></Link>
+            <h1 className="fw-bolder text-success fs-1 mt-3">Tripo Tourism Agencies</h1>
+            <h3 className="fw-bolder txt-cl fs-1 mt-5"> Services <br /> Where would you like to go?</h3>
         </div>
     );
 };
