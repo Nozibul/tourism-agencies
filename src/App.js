@@ -13,6 +13,8 @@ import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 import Register from './pages/Register/Register';
 import ServicesDetails from './component/ServicesDetails/ServicesDetails';
 import Footer from './pages/Footer/Footer';
+import MyOrder from './component/MyOrders/MyOrder';
+import AllOrders from './component/AllOrders/AllOrders';
 
 function App() {
   return (
@@ -32,14 +34,24 @@ function App() {
              <Home />
              <Footer></Footer>
           </Route>
-          <Route exact path="/about">
+          {/* <Route exact path="/about">
             <Header />
             <About />
             <Footer></Footer>
-          </Route>
+          </Route> */}
           <Route exact path="/services">
             <Header />
             <Services />
+            <Footer></Footer>
+          </Route>
+          <Route exact path="/myOrder">
+          <Header />
+            <MyOrder />
+            <Footer></Footer>
+          </Route>
+          <Route exact path="/alOrder">
+            <Header />
+             <AllOrders />
             <Footer></Footer>
           </Route>
           <PrivateRoute exact path="/services/:Id">

@@ -11,7 +11,6 @@ const Footer = () => {
                      <ul>
                          <li>Phone: 88057491</li>
                          <li>Email</li>
-                         <li>eye@care.com</li>
                          <li>Address</li>
                          <li>123, southzone, Melbourne</li>
                          <li>Australia</li>
@@ -44,7 +43,7 @@ const Footer = () => {
                    </div>
                 </div>
                 <hr />
-            <span className="text-white text-center">&copy;Copyright 2021 |Eye Care | All right reserved.</span>
+            <h5 className="text-white text-center">&copy;Copyright 2021 |Tourism Agencies| All right reserved.</h5>
         </div>
     );
 };
