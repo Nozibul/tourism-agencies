@@ -15,6 +15,7 @@ import ServicesDetails from './component/ServicesDetails/ServicesDetails';
 import Footer from './pages/Footer/Footer';
 import MyOrder from './component/MyOrders/MyOrder';
 import AllOrders from './component/AllOrders/AllOrders';
+import AddServices from './component/AddServices/AddServices';
 
 function App() {
   return (
@@ -54,11 +55,11 @@ function App() {
              <AllOrders />
             <Footer></Footer>
           </Route>
-          <PrivateRoute exact path="/services/:Id">
+          <Route exact path="/services/:id">
              <Header />
              <ServicesDetails></ServicesDetails>
              <Footer></Footer>
-          </PrivateRoute>
+          </Route>
           <PrivateRoute exact path="/contact">
              <Header />
              <Contact />

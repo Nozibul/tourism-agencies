@@ -15,7 +15,6 @@ const Services = () => {
     return (
         <div className="container-fluid mt-5">
             <h1 className="fw-bolder text-center" style={{color:"green"}}>Our Available Package</h1>
-         
             <div className="row pb-5">
                     {
                             serviecs?.map((service, index) => <SingleService

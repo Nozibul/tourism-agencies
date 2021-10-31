@@ -1,0 +1,19 @@
+.add-service form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(161, 163, 51);
+    padding: 10px;
+    border-radius: 10px;
+
+   
+}
+ .add-service form input {
+     margin-top: 7px;
+     width: 87%;
+     border-radius: 10px;
+     padding: 5px;
+     border: none;
+    
+ }
