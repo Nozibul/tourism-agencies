@@ -8,12 +8,30 @@ const ServicesDetails = () => {
 
     const [details, setDetails] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/travels')
+        fetch('https://quiet-castle-93838.herokuapp.com/travels')
         .then(res=> res.json())
         .then(data=>setDetails(data))
     },[])
 
-     const serviceDetail= details.filter(dt=> dt.id === parseInt(id) );
+  const handleDelete = id =>{
+    const url = `https://quiet-castle-93838.herokuapp.com/${id}` 
+    fetch(url, {
+        method:'DELETE',
+        
+    })
+    .then(res=>res.json())
+    
+    .then(data =>{
+        if(data.deletedCount>0){
+            alert('deleted successfully');
+            const remaining = details.filter(details=>details._id !== id);
+            setDetails(remaining)
+        }
+    })
+  
+  }
+
+     const serviceDetail= details.filter(dt=> dt._id === id );
     
     return (
         
@@ -24,6 +42,8 @@ const ServicesDetails = () => {
                    {
                         serviceDetail ? (serviceDetail.map(service=>(
                             <div className="card mb-3">
+                                <button onClick={()=>handleDelete(serviceDetail._id)}>Delete</button>
+                                <button>Update</button>
                                 <img src={service.image} alt="" />
                                 <div className="card-body">
                                     <h3 className="text-center fw-bolder">{service.name}</h3>

@@ -4,7 +4,7 @@ import './singleCard.css'
 
 
 const SingleService = (props) => {
-    const {id, name, image , description,cost} = props.services;
+    const {_id, name, image , description,cost} = props.services;
 
     return (
  
@@ -18,7 +18,7 @@ const SingleService = (props) => {
                         <p className="card-text">{description}</p>
                         <h5 className="text-center">Cost: ${cost}</h5> 
                     </div>
-                    <button className="card-btn mx-auto"><NavLink to={`/services/${id}`} className="nav fw-bolder fs-5  text-success" >Booking Now</NavLink></button>
+                    <button className="card-btn mx-auto"><NavLink to={`/services/${_id}`} className="nav fw-bolder fs-5  text-success" >Booking Now</NavLink></button>
                 </div>
                
             </div>
