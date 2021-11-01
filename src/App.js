@@ -35,18 +35,18 @@ function App() {
              <Home />
              <Footer></Footer>
           </Route>
-          {/* <Route exact path="/about">
+          <Route exact path="/about">
             <Header />
             <About />
             <Footer></Footer>
-          </Route> */}
+          </Route>
           <Route exact path="/services">
             <Header />
             <Services />
             <Footer></Footer>
           </Route>
           <Route exact path="/myOrder">
-          <Header />
+            <Header />
             <MyOrder />
             <Footer></Footer>
           </Route>
@@ -55,16 +55,16 @@ function App() {
              <AllOrders />
             <Footer></Footer>
           </Route>
-          <Route exact path="/services/:id">
+          <PrivateRoute exact path="/services/:id">
              <Header />
              <ServicesDetails></ServicesDetails>
              <Footer></Footer>
-          </Route>
-          <PrivateRoute exact path="/contact">
+          </PrivateRoute>
+          <Route exact path="/contact">
              <Header />
              <Contact />
              <Footer></Footer>
-          </PrivateRoute>
+          </Route>
           <Route exact path="/login">
              <Header />
              <Login />

@@ -8,7 +8,7 @@ const ServicesDetails = () => {
 
     const [details, setDetails] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/travel')
+        fetch('http://localhost:5000/travels')
         .then(res=> res.json())
         .then(data=>setDetails(data))
     },[])
@@ -18,7 +18,7 @@ const ServicesDetails = () => {
     return (
         
         <div  className="container-fluid w-75 h-25 justify-content-center ">
-            
+               
             <div className="row  ">
                <div className="col-lg-8">
                    {

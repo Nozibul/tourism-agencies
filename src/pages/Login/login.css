@@ -1,0 +1,45 @@
+.login{
+    background-color: rgb(42, 97, 160);
+    height: 270px;
+    margin-top:-25px;
+    
+
+}
+.form{
+    padding-top:30px;
+    height: 200px;
+   
+}
+.input-area{
+  margin-top:5px;
+  border-radius: 7px;
+  border: none;
+  width: 230px;
+  padding: 3px 3px;
+}
+.input-submit{
+    width: 150px;
+    padding: 7px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    background-color:#8b9413 ;
+}
+.input-submit:hover{
+    background-color: indianred;
+}
+
+.google-btn{
+    border: none;
+    padding: 5px 8px;
+    margin-bottom: 5px;
+   
+    border-radius: 10px;
+    background-color: indianred;
+    color: lavender;
+    font-weight: 700;
+}
+.submit-btn:hover{
+    background-color: rgb(182, 73, 73);
+}

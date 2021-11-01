@@ -4,7 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+* This application one can easily go to his choice location.
+* This application easy to use for every person.
+* Using this application you can easily complete your tour.
+* Use online and offline this application .
+* This project is very Helpful by client.
 
 ### `npm start`
 

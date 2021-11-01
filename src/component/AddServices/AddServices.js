@@ -14,12 +14,14 @@ const AddServices = () => {
         },
         body: JSON.stringify(data)
     })
-      .then(res=>{
-         if(res.data){
-             alert('Inserted Data successfully')
+    .then(res=>res.json())
+    .then(data =>{
+        if(data.insertedId){
+            alert('Successfully added the Database')
              reset()
-         }
-     })
+        }
+        
+    })
    };
 
     return (

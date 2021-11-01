@@ -15,7 +15,7 @@ const SingleService = (props) => {
                     <img src={image}  alt="" />
                     <div className="card-body">
                         <h5 className="card-title">{name}</h5>
-                        <p className="card-text">{description.slice(0, 80)}</p>
+                        <p className="card-text">{description}</p>
                         <h5 className="text-center">Cost: ${cost}</h5> 
                     </div>
                     <button className="card-btn mx-auto"><NavLink to={`/services/${id}`} className="nav fw-bolder fs-5  text-success" >Booking Now</NavLink></button>
