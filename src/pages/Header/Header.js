@@ -25,7 +25,6 @@ const Header = () => {
                        }
                       <Nav.Link as={NavLink} className="text-dark  fw-bolder" to="/allOrder">Manage All Order </Nav.Link>
 
-                        {/* <Nav.Link as={NavLink} className="text-dark  fw-bolder" to="/services">Service </Nav.Link> */}
                         <Nav.Link as={NavLink} className="text-dark fw-bolder" to="/contact"> Contact </Nav.Link>
                         {/*<NavDropdown title="Dropdown">
                              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

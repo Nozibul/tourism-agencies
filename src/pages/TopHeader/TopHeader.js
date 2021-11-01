@@ -12,15 +12,15 @@ const TopHeader = () => {
     return (
         
             <div className="row bg-top m-auto">
-                <div className="col-lg-3 col-sm-6  border">
+                <div className="col-lg-3 col-sm-6  ">
                     <p className="text-center mt-1 "><Link className="contact" to="/contact">needhelp@tripo.com</Link></p>
                 </div>
-                <div className="col-lg-3 col-sm-12  border">
+                <div className="col-lg-3 col-sm-12 ">
                   <p className="text-center mt-1">
                    <FontAwesomeIcon icon={faPhone} /><Link className="contact" to="/contact">+00182678976</Link></p>
 
                 </div>
-                <div className="col-lg-6 col-sm-12  border">
+                <div className="col-lg-6 col-sm-12 ">
                  
                     <div className=" text-center  icon-body mt-2">
                             <FontAwesomeIcon className="mx-2 fs-6 icon-body " icon={faFacebook} /> 

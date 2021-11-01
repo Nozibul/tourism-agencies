@@ -1,0 +1,24 @@
+.dubai{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border-radius: 50%;
+    
+}
+.france{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border-radius: 50%;
+}
+.canada{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border-radius: 50%;
+}
+.card{
+    background-color: indianred;
+    color: white;
+    border-radius: 5px;
+}

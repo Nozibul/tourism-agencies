@@ -3,21 +3,21 @@ import './about.css'
 
 const About = () => {
     return (
-        <div>                      
+        <div className="about">                      
              <div className="row container-fluid">
-                 <h4 className="text-success mt-5">About Us</h4>
-                 <h1 className="fw-bolder mt-3">We Are Caring For Your Eye Health Hospital</h1>
-                 <p className="fw-bolder fs-5">A new way to practice without the hassle <br /> of and expense of
-                      office space. We help you launch your <br /> private practice with ease.
-                       Modern Open Design. EHR & Billing Support. Insanely Fast Internet.</p>
-                 <ul className="fw-bolder">
-                     <li>Best lasik treatment</li>
-                     <li>Treats minor illnesses</li>
-                     <li>Special eye exam</li>
-                     <li>Contact lens service</li>
-                     <li>Special Retina exam</li>
+                 <h4 className="text-success text-center mt-5">About Us</h4>
+                 <h1 className="fw-bolder mt-3">Travel the most beautiful place in the world</h1>
+                 <p className="fw-bolder fs-5">Journey are best measure in a friends <br /> 
+                   Journey are best measure in a friends. We help you launch your <br /> 
+                      Travel the most beautiful place in the world Insanely Fast Internet.</p>
+                  <h2 className="text-center">Our Major Services in Country</h2>    
+                 <ul className="fw-bolder text-center">
+                     <li>California</li>
+                     <li>Canada</li>
+                     <li>London</li>
+                     <li>Switzerland</li>
+                     <li>Romania</li>
                  </ul>
-                 <button className="mb-5 mt-5 w-25 m-auto fw-bolder btn">More About Us</button>
              </div> 
             </div> 
                         
