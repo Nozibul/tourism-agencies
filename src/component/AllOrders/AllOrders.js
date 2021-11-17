@@ -38,9 +38,9 @@ const AllOrders = () => {
     return (
      <div>
        <Header />
-        <div>
+        <div className="container mt-5 mb-5"> 
           <h3 className="text-success text-center pt-3">Total Order: {allOrder?.length}</h3>
-            <Table responsive>
+            <Table responsive striped bordered hover>
                 <thead>
                     <tr>
                     <th>No.</th>
