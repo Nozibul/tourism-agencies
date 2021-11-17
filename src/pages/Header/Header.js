@@ -11,7 +11,7 @@ const Header = () => {
     return (
         <div >
             <Navbar className="header-bg" collapseOnSelect expand="lg" sticky-top variant="dark">
-            ` <Container fluid>
+             <Container fluid>
                 <Navbar.Brand to="/home"><img  className="logo" src={logo} alt="" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
@@ -43,7 +43,7 @@ const Header = () => {
                     </Nav>
                 </Navbar.Collapse>
              </Container >
-            </Navbar>`
+            </Navbar>
         </div>
     );
 };
