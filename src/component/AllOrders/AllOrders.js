@@ -16,24 +16,24 @@ const AllOrders = () => {
 
     //delete all orders
     const handleDeleteOrder = (id) =>{
+        console.log(id)
         const permission = window.confirm('Are you sure ? you went delete')
-        if(permission){
-              const url = `https://quiet-castle-93838.herokuapp.com/orders/${id}`
+         if(permission){
+         const url = `https://quiet-castle-93838.herokuapp.com/orders/${id}`
         fetch(url,{
-         method: 'DELETE',
-
+            method: "DELETE",
         })
         .then(res=>res.json())
         .then(data=>{
-         if(data.deletedCount){
-             alert('Successfully delete')
-             const remainingUser = allOrder.filter(orders=> orders._id !== id)
+          if(data.deletedCount>0){
+              alert('Successfully delete')
+              const remainingUser = allOrder.filter(orders => orders._id !== id)
              setAllOrder(remainingUser)
          }
-      })
-     }
-     
+       })
+      }
     }
+   
    
     return (
      <div>
@@ -59,13 +59,15 @@ const AllOrders = () => {
                             <td>{orders.email}</td>
                             <td>{orders.name}</td>
                             <td>{orders.phone}</td>
-                            <td>{orders.phone}</td>
+                            <td></td>
+                            <td>
                              <button
-                                onClick={() => handleDeleteOrder()}
+                                onClick={() => handleDeleteOrder(orders._id)}
                                 className="bg-danger text-white border rounded-3"
                                 >
-                            Delete
-                            </button>            
+                             Delete
+                            </button> 
+                            </td>            
                     </tr>
                     )
                   }  
