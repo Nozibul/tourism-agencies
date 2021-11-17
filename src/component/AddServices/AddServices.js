@@ -1,13 +1,14 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import useAuth from '../../Hooks/useAuth';
 import './addService.css'
 
 const AddServices = () => {
+    const {user} = useAuth()
     const { register, handleSubmit, reset } = useForm();
    const onSubmit = data =>{
-     console.log(data)
   
-    fetch('http://localhost:5000/travel',{
+    fetch('http://localhost:5000/orders',{
         method:"post",
         headers:{
             'content-type': "application/json"
@@ -26,14 +27,14 @@ const AddServices = () => {
 
     return (
         <div className="add-service">
-            <h4 className="text-center fs-bolder text-success">Place Order</h4>
+            <h4 className="text-center fs-bolder text-success mt-4 ">Place Order</h4>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("name", { required: true, maxLength: 20 })} placeholder="your name..." />
-                <input {...register("address", { required: true, maxLength: 20 })} placeholder="your address..." />
-                <input type="number" {...register("price")} placeholder="phone no..." />
-                <input {...register("img")} placeholder="img url"/>
+                <input defaultValue={user?.email} {...register("email", { required: true,  })} placeholder="your email..." />
+                <input {...register("name", { required: true,  })} placeholder="your name..." />
+                <input {...register("address", { required: true,  })} placeholder="your address..." />
+                <input type="number" {...register("phone")} placeholder="phone no..." />
 
-                <input type="submit" />
+                <input className="place-btn" type="submit" />
             </form>
         </div>
     );

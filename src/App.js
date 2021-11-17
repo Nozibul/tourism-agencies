@@ -6,7 +6,6 @@ import Contact from './component/Contact/Contact';
 import Home from './component/Home/Home';
 import Services from './component/Services/Services';
 import Header from './pages/Header/Header';
-import TopHeader from './pages/TopHeader/TopHeader';
 import Login from './pages/Login/Login';
 import AuthProvider from './component/context/AuthProvider';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
@@ -15,7 +14,6 @@ import ServicesDetails from './component/ServicesDetails/ServicesDetails';
 import Footer from './pages/Footer/Footer';
 import MyOrder from './component/MyOrders/MyOrder';
 import AllOrders from './component/AllOrders/AllOrders';
-import AddServices from './component/AddServices/AddServices';
 
 function App() {
   return (
@@ -23,37 +21,37 @@ function App() {
    <AuthProvider>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/">
-             <TopHeader />
-             <Header />
+          <Route exact path="/">           
+            
              <Home />
-             <Footer></Footer>
+             
           </Route>
           <Route exact path="/home">
-            <TopHeader />
-             <Header />
+           
+            
              <Home />
-             <Footer></Footer>
+            
           </Route>
           <Route exact path="/about">
-            <Header />
+           
             <About />
-            <Footer></Footer>
+           
           </Route>
+         
           <Route exact path="/services">
-            <Header />
+            
             <Services />
-            <Footer></Footer>
+           
           </Route>
           <Route exact path="/myOrder">
             <Header />
             <MyOrder />
             <Footer></Footer>
           </Route>
-          <Route exact path="/alOrder">
-            <Header />
+          <Route exact path="/allOrder">
+           
              <AllOrders />
-            <Footer></Footer>
+           
           </Route>
           <PrivateRoute exact path="/services/:id">
              <Header />

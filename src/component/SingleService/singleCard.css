@@ -8,3 +8,11 @@ width: 150px;
 .nav{
     text-decoration: none;
 }
+.icon-color{
+    color: darkorange;
+
+}
+.card:hover{
+    box-shadow: 5px 10px 5px rgb(201, 196, 196);
+
+}

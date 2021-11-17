@@ -1,9 +1,13 @@
 import React from 'react';
+import Footer from '../../pages/Footer/Footer';
+import Header from '../../pages/Header/Header';
 import './about.css'
 
 const About = () => {
     return (
-        <div className="about">                      
+        <div>
+            <Header />
+            <div className="about">                      
              <div className="row container-fluid">
                  <h4 className="text-success text-center mt-5">About Us</h4>
                  <h1 className="fw-bolder mt-3">Travel the most beautiful place in the world</h1>
@@ -20,6 +24,8 @@ const About = () => {
                  </ul>
              </div> 
             </div> 
+           <Footer /> 
+        </div>
                         
     );
 };

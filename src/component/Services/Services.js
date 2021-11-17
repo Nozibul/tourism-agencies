@@ -1,5 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
+import Footer from '../../pages/Footer/Footer';
+import Header from '../../pages/Header/Header';
 import SingleService from '../SingleService/SingleService';
 
 const Services = () => {
@@ -13,11 +15,13 @@ const Services = () => {
     },[])
 
     return (
-        <div className="container-fluid mt-5">
+       <div>
+       
+         <div className="container-fluid mt-5">
             <h1 className="fw-bolder text-center" style={{color:"green"}}>Our Available Package</h1>
             <div className="row pb-5">
                     {
-                            serviecs.slice(0, 6)?.map((service, index) => <SingleService
+                            serviecs?.map((service, index) => <SingleService
                             services={service}
                             key={index}
                             
@@ -25,7 +29,8 @@ const Services = () => {
                     }
             </div>
           
-        </div>
+          </div>
+       </div>
     );
 };
 
