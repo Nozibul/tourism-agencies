@@ -14,7 +14,6 @@ import Footer from "./pages/Footer/Footer";
 import MyOrder from "./component/MyOrders/MyOrder";
 import AllOrders from "./component/AllOrders/AllOrders";
 import AddProduct from "./component/AddProduct/AddProduct";
-import NotFound from "./pages/NotFound/NotFound"
 
 function App() {
   return (
@@ -60,9 +59,7 @@ function App() {
               <Footer></Footer>
             </Route>
           </Switch>
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
+         
         </BrowserRouter>
       </AuthProvider>
     </div>

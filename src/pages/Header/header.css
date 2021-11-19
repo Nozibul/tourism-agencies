@@ -9,7 +9,10 @@
     width: 130px;
   
 }
-
+.bg-hover:hover{
+    background-color: #ffa601ed;
+    border-radius: 10px;
+}
 .bg{
     color: black;
 }

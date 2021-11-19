@@ -28,9 +28,9 @@ const AddProduct = () => {
     return (
        <div>
         <Header />
-          <div className="add-product">
-            <h4 className="text-center fs-bolder text-success mt-4 ">Place Order</h4>
-            <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="container add-product">
+            <h4 className="text-center fs-bolder text-success mt-4 text-white">Place Order</h4>
+            <form  className="text-center" onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("image", { required: true,  })} placeholder="location image..." />
                 <input {...register("name", { required: true,  })} placeholder="location name..." />
                 <input {...register("description", { required: true,  })} placeholder="description..." />

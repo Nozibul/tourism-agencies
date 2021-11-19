@@ -6,6 +6,7 @@ const Footer = () => {
         <div className="footer">
             <div className="container">
                 <div className="row">
+             
                     <div className="col-lg-4 col-md-2 col-sm-12">
                      <h2>Contact</h2>
                      <ul>
@@ -38,12 +39,10 @@ const Footer = () => {
                      </div>
                     
                   </div>
-                   <div>
-                      
-                   </div>
+                  
                 </div>
                 <hr />
-            <h5 className="text-white text-center">&copy;Copyright 2021 |Tourism Agencies| All right reserved.</h5>
+            <p className="text-white text-center">&copy;Copyright 2021 |Tourism Agencies| All right reserved.</p>
         </div>
     );
 };

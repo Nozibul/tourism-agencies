@@ -1,6 +1,7 @@
 import React from "react";
 import Rating from "react-rating";
 import { NavLink } from "react-router-dom";
+import Zoom from 'react-reveal/Zoom';
 import "./singleCard.css";
 
 const SingleService = (props) => {
@@ -8,7 +9,8 @@ const SingleService = (props) => {
 
   return (
     <div className="col-lg-4 col-md-6 col-sm-12">
-      <div className="card-group mt-5">
+      <Zoom cascade>     
+       <div className="card-group mt-5">
         <div className="card pb-3">
           <img src={image} alt="" />
           <div className="card-body">
@@ -33,6 +35,7 @@ const SingleService = (props) => {
           </button>
         </div>
       </div>
+    </Zoom>
     </div>
   );
 };

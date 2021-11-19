@@ -25,7 +25,7 @@ const Header = () => {
             <Nav className="m-auto bg ">
               <Nav.Link
                 as={NavLink}
-                className="text-dark  fw-bolder"
+                className="text-dark bg-hover fw-bolder"
                 to="/home"
               >
                 Home
@@ -34,7 +34,7 @@ const Header = () => {
               {user?.email && (
                 <Nav.Link
                   as={NavLink}
-                  className="text-dark  fw-bolder"
+                  className="text-dark bg-hover fw-bolder"
                   to="/myOrder"
                 >
                   My Order{" "}
@@ -43,7 +43,7 @@ const Header = () => {
               {user?.email && (
                 <Nav.Link
                   as={NavLink}
-                  className="text-dark  fw-bolder"
+                  className="text-dark bg-hover fw-bolder"
                   to="/allOrder"
                 >
                   Manage All Order{" "}
@@ -52,7 +52,7 @@ const Header = () => {
               {user?.email && (
                 <Nav.Link
                   as={NavLink}
-                  className="text-dark  fw-bolder"
+                  className="text-dark bg-hover fw-bolder"
                   to="/addProduct"
                 >
                   Add Product
@@ -61,7 +61,7 @@ const Header = () => {
 
               <Nav.Link
                 as={NavLink}
-                className="text-dark fw-bolder"
+                className="text-dark bg-hover fw-bolder"
                 to="/contact"
               >
                 {" "}
