@@ -4,10 +4,14 @@ import './contact.css'
 import icon1 from './../../assets/image/25489.jpg'
 import icon2 from './../../assets/image/52112.jpg'
 import icon3 from './../../assets/image/blue-button-with.jpg'
+import Header from '../../pages/Header/Header';
+import Footer from '../../pages/Footer/Footer';
 
 const Contact = () => {
     return (
-        <div className="contact-body pb-5">
+    <div>
+        <Header />
+        <div className="container-fluid contact-body pb-5">
             <h3 className="text-white pt-5 text-center fw-bolder">Contact Us</h3>
             <div className="card-group pt-3 ">
                 <div className="card-contact">
@@ -18,21 +22,23 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="card-contact">
-                <img className="contact-img" src={icon2} alt="" />
+                <img className="contact-img" src={icon3} alt="" />
                     <div className="card-body">
                     <h5 className="card-title">Email Address</h5>
                     <p className="card-text">tripo@gmail.com <br /> tour@gmail.com</p>
                     </div>
                 </div>
                 <div className="card-contact">
-                <img className="contact-img" src={icon3}  alt="" />
+                <img className="contact-img" src={icon2}  alt="" />
                     <div className="card-body">
                     <h5 className="card-title">Location</h5>
                     <p className="card-text">123, southzone,<br /> Melbourne</p>
                     </div>
                 </div>
-                </div>
-      </div>
+             </div>
+         </div>
+         <Footer />
+      </div> 
     );
 };
 

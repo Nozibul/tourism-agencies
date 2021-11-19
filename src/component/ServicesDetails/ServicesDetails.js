@@ -12,21 +12,7 @@ const ServicesDetails = () => {
       .then((data) => setDetails(data));
   }, []);
 
-//   const handleDelete = (id) => {
-//     const url = `https://quiet-castle-93838.herokuapp.com/${id}`;
-//     fetch(url, {
-//       method: "DELETE",
-//     })
-//       .then((res) => res.json())
 
-//       .then((data) => {
-//         if (data.deletedCount > 0) {
-//           alert("deleted successfully");
-//           const remaining = details.filter((details) => details._id !== id);
-//           setDetails(remaining);
-//         }
-//       });
-//   };
 
   const serviceDetail = details.filter((dt) => dt._id === id);
 

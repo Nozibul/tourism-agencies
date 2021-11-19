@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import About from "./component/About/About";
 import Contact from "./component/Contact/Contact";
 import Home from "./component/Home/Home";
 import Services from "./component/Services/Services";
@@ -14,6 +13,8 @@ import ServicesDetails from "./component/ServicesDetails/ServicesDetails";
 import Footer from "./pages/Footer/Footer";
 import MyOrder from "./component/MyOrders/MyOrder";
 import AllOrders from "./component/AllOrders/AllOrders";
+import AddProduct from "./component/AddProduct/AddProduct";
+import NotFound from "./pages/NotFound/NotFound"
 
 function App() {
   return (
@@ -27,20 +28,18 @@ function App() {
             <Route exact path="/home">
               <Home />
             </Route>
-            <Route exact path="/about">
-              <About />
-            </Route>
-
+          
             <Route exact path="/services">
               <Services />
             </Route>
             <Route exact path="/myOrder">
-              
               <MyOrder />
-              
             </Route>
             <Route exact path="/allOrder">
               <AllOrders />
+            </Route>
+            <Route exact path="/addProduct">
+              <AddProduct />
             </Route>
             <PrivateRoute exact path="/services/:id">
               <Header />
@@ -48,9 +47,7 @@ function App() {
               <Footer></Footer>
             </PrivateRoute>
             <Route exact path="/contact">
-              <Header />
               <Contact />
-              <Footer></Footer>
             </Route>
             <Route exact path="/login">
               <Header />
@@ -63,7 +60,9 @@ function App() {
               <Footer></Footer>
             </Route>
           </Switch>
-          <Route path="*"></Route>
+          <Route path="*">
+            <NotFound></NotFound>
+          </Route>
         </BrowserRouter>
       </AuthProvider>
     </div>

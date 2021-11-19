@@ -6,9 +6,9 @@ import './addService.css'
 const AddServices = () => {
     const {user} = useAuth()
     const { register, handleSubmit, reset } = useForm();
-   const onSubmit = data =>{
-  
-    fetch('http://localhost:5000/orders',{
+   const onSubmit = (data) =>{
+      data.status="pending";
+    fetch('https://quiet-castle-93838.herokuapp.com/orders',{
         method:"post",
         headers:{
             'content-type': "application/json"

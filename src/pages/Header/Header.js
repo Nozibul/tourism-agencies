@@ -16,7 +16,7 @@ const Header = () => {
         sticky-top
         variant="dark"
       >
-        <Container fluid>
+        <Container>
           <Navbar.Brand to="/home">
             <img className="logo " src={logo} alt="" />
           </Navbar.Brand>
@@ -29,13 +29,6 @@ const Header = () => {
                 to="/home"
               >
                 Home
-              </Nav.Link>
-              <Nav.Link
-                as={NavLink}
-                className="text-dark  fw-bolder"
-                to="/about"
-              >
-                About
               </Nav.Link>
 
               {user?.email && (
@@ -75,7 +68,7 @@ const Header = () => {
                 Contact{" "}
               </Nav.Link>
             </Nav>
-            <Nav >
+            <Nav>
               <p>{user?.displayName}</p>
               {user?.email ? (
                 <button className="login-btn" onClick={logOut}>

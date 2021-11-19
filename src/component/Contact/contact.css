@@ -11,13 +11,12 @@
     justify-content: center;
 }
 .card-contact{
-    background-color:rgb(109, 70, 26) ;
-    color: rgb(62, 219, 224);
+    background-color:rgb(175, 173, 170) ;
    padding: 50px;
    margin: 0px 20px;
    border-radius: 20px;
 }
 .card-contact:hover{
-  background-color: rgba(47, 170, 47, 0.486);
-  color: #b4c8df;
+  background-color: rgba(20, 131, 20, 0.486);
+  color: #ccdae9;
 }

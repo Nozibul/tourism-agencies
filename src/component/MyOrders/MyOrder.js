@@ -39,15 +39,17 @@ const MyOrder = () => {
         <div>
         <Header />
          <div className="container mt-5 mb-5"> 
-           <h3 className="text-success text-center pt-3">Total Order: {myOrder?.length}</h3>
+           <h3 className="text-success text-center pt-3">My Order: {myOrder?.length}</h3>
              <Table responsive striped bordered hover>
                  <thead>
                      <tr>
                      <th>No.</th>
                      <th>Email</th>
                      <th>Name</th>
-                     <th>Phone</th>
+                     <th>Address</th>
+                     <th>status</th>
                      <th>Delete</th>
+                     
                     
                      </tr>
                  </thead>
@@ -59,7 +61,7 @@ const MyOrder = () => {
                              <td>{orders.email}</td>
                              <td>{orders.name}</td>
                              <td>{orders.address}</td>
-                             <td></td>
+                             <td>{orders.status}</td>
                               <td>
                               <button
                                  onClick={() => handleOrderDelete(orders?._id)}

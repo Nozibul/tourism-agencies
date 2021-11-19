@@ -6,7 +6,7 @@ import './login.css'
 
  const Login = () => {
     
-     const {googleSignIn, setUser ,signInEmailPassword , name
+     const {googleSignIn, setUser ,signInEmailPassword 
         ,email, setEmail, password, setPassword, setIsLoading} = useAuth()
 
      const history = useHistory()

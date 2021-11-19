@@ -10,7 +10,7 @@ const Footer = () => {
                      <h2>Contact</h2>
                      <ul>
                          <li>Phone: 88057491</li>
-                         <li>Email</li>
+                         <li>Email: tour@help.com</li>
                          <li>Address</li>
                          <li>123, southzone, Melbourne</li>
                          <li>Australia</li>

@@ -6,13 +6,15 @@ import Footer from '../../pages/Footer/Footer';
 import Header from '../../pages/Header/Header';
 
 const AllOrders = () => {
-    const [allOrder, setAllOrder]= useState([])
+    const [allOrder, setAllOrder]= useState([]);
+    const [status, setStatus] = useState(true);
+
 
     useEffect(()=>{
         fetch('https://quiet-castle-93838.herokuapp.com/orders')
         .then(res=>res.json())
         .then(data=>setAllOrder(data))
-    },[])
+    },[status])
 
     //delete all orders
     const handleDeleteOrder = (id) =>{
@@ -34,7 +36,23 @@ const AllOrders = () => {
       }
     }
    
-   
+   // update order
+  const handleUpdateOrder = (id)=>{
+      const confirmUpdate = window.confirm('Are yuo sure you went to update???')
+      if(confirmUpdate){
+        const url = `https://quiet-castle-93838.herokuapp.com/updateOrder/${id}`
+        fetch(url,{
+            method: 'PUT',
+           
+        })
+        .then(res=>res.json())
+        .then(data=>{
+          if(data.modifiedCount>0){
+            setStatus(!status)
+           }
+        })
+      }
+   }
     return (
      <div>
        <Header />
@@ -47,27 +65,38 @@ const AllOrders = () => {
                     <th>Email</th>
                     <th>Name</th>
                     <th>Phone</th>
+                    <th>Status</th>
                     <th>Delete</th>
+                    <th>update</th>
                    
                     </tr>
                 </thead>
                 <tbody>
                   {
-                    allOrder.map((orders, index)=><tr key={index}>
+                    allOrder?.map((orders, index)=><tr key={index}>
                        
                             <td>{index+1}.</td>
                             <td>{orders.email}</td>
                             <td>{orders.name}</td>
                             <td>{orders.phone}</td>
-                            <td></td>
+                            <td className="fw-bolder">{orders.status}</td>
                             <td>
                              <button
                                 onClick={() => handleDeleteOrder(orders._id)}
-                                className="bg-danger text-white border rounded-3"
+                                className="bg-success text-white border rounded-3"
                                 >
-                             Delete
+                            delete
                             </button> 
-                            </td>            
+                             
+                            </td> 
+                            <td>
+                              <button
+                                  onClick={() => handleUpdateOrder(orders._id)}
+                                  className="bg-danger text-white border rounded-3"
+                                  >
+                              update
+                              </button>
+                            </td>           
                     </tr>
                     )
                   }  

@@ -1,17 +1,18 @@
 
 import React, { useEffect, useState } from 'react';
-import Footer from '../../pages/Footer/Footer';
-import Header from '../../pages/Header/Header';
 import SingleService from '../SingleService/SingleService';
 
 const Services = () => {
 
-    const [serviecs, setServices] = useState([])
+    const [services, setServices] = useState([])
 
     useEffect(()=>{
         fetch('https://quiet-castle-93838.herokuapp.com/travels')
         .then(res=> res.json())
-        .then(data=>setServices(data))
+        .then(data=>{
+          const reverseData  = data.reverse();
+          setServices(reverseData)
+        })
     },[])
 
     return (
@@ -21,7 +22,7 @@ const Services = () => {
             <h1 className="fw-bolder text-center" style={{color:"green"}}>Our Available Package</h1>
             <div className="row pb-5">
                     {
-                            serviecs?.map((service, index) => <SingleService
+                            services?.map((service, index) => <SingleService
                             services={service}
                             key={index}
                             

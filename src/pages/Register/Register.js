@@ -6,7 +6,7 @@ import './register.css'
 
 const Register = () => {
     const {googleSignIn, setUser,createEmailPassword, email, name,
-        setEmail,password,setPassword,setIsLoading, updatedName,  setName, user} = useAuth()
+        setEmail,password,setPassword,setIsLoading, updatedName,  setName} = useAuth()
 
 
 
@@ -41,9 +41,9 @@ const Register = () => {
           setUser(result.user);
           history.push(uri)
         })
-            // .catch((error) => {
-            // console.log(error)
-            // });
+            .catch((error) => {
+            console.log(error)
+            })
         .finally(()=>{
             setIsLoading(false)
         })
